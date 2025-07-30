@@ -1,0 +1,91 @@
+body{
+    color: white;
+    font-family: Solway;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow: hidden; */
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+.background-blur {
+    background-image: url('Images\\pexels-chanwalrus-958546.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: blur(5px); /* 👈 adjust blur strength */
+
+}
+.page {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 50vw;
+    margin-top: 10vh;
+    gap: 200px;
+}
+h1{
+    font-family: Hammersmith;
+    font-size: 20vmin;
+}
+h2{
+    font-family: Hammersmith;
+    font-size: 15vmin;
+}
+p{
+    font-size: 2vmin;
+}
+#content>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* max-width: 70%; */
+}
+.about-text{
+    width: 60%;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav>button{
+    border: none;
+    background: none;
+    font-size: 3vmin;
+    font-family: Solway;
+    color: #f5f5ef;
+    cursor: pointer;
+}
+#cta{
+    border: none;
+    font-size: 25px;
+    padding: 15px 30px;
+    color: white;
+    background: #b0896f;
+}
+.menu-items{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+}
+.menu-items>div>div>img{
+    width: 100px;
+}
