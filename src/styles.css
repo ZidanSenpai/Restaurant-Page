@@ -9,7 +9,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 header{
     display: flex;
@@ -26,7 +26,6 @@ header{
     height: 100vh;
     z-index: -1;
     filter: blur(5px); /* 👈 adjust blur strength */
-
 }
 .page {
     position: relative;
@@ -82,10 +81,36 @@ nav>button{
     color: white;
     background: #b0896f;
 }
-.menu-items{
+#menu-items {
     display: grid;
-    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 2vmin;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    justify-items: end;
 }
-.menu-items>div>div>img{
-    width: 100px;
+.samosa, .biryani, .dosa {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    text-align: center;
+}
+.food-image {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 👈 ensures uniform size while cropping */
+    display: block;
+}
+.food-about {
+    margin-top: 10px;
+    font-size: 1.8vmin;
+    text-align: left;
 }
